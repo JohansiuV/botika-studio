@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Botica Johansu  · Catálogo & Tienda</title>
+<meta name="description" content="Botica Johansu  — medicamentos, cuidado personal, vitaminas y bebés. Compra fácil, paga con Yape.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/demo.css">
+</head>
+<body class="store-body">
+
+<a class="back-link" href="index.html">← Botika Studio</a>
+
+<header class="store-shell-header">
+  <div class="wrap store-header-inner">
+    <div class="logo"><span class="mark"></span> Botica Johansu </div>
+    <nav class="store-catnav">
+      <a href="#cat-medicamentos">Medicamentos</a>
+      <a href="#cat-cuidado">Cuidado personal</a>
+      <a href="#cat-vitaminas">Vitaminas</a>
+      <a href="#cat-bebes">Bebés</a>
+    </nav>
+    <div class="store-header-actions">
+      <a href="https://www.instagram.com/eark_mn" target="_blank" rel="noopener" class="ig-link">@boticajohansu</a>
+      <button class="cart-btn" id="cartOpenBtn" aria-label="Abrir carrito">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 4h2l2.4 12.2a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="21" r="1.4" fill="currentColor"/><circle cx="17" cy="21" r="1.4" fill="currentColor"/></svg>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="store-hero">
+  <div class="wrap store-hero-inner">
+    <span class="eyebrow-free">Catálogo digital · Paga con Yape</span>
+    <h1 class="serif">Tu botica de siempre,<br>ahora también aquí.</h1>
+    <p class="lead">Elige tus productos, agrégalos al carrito y paga escaneando el QR de Yape. Coordinamos la entrega por WhatsApp.</p>
+  </div>
+</section>
+
+<section class="cat-overview">
+  <div class="wrap cat-cards">
+    <a href="#cat-medicamentos" class="cat-card">
+      <span class="cat-thumb a"></span>
+      <h3>Medicamentos</h3>
+      <span class="cat-count" data-count-for="medicamentos">0 productos</span>
+    </a>
+    <a href="#cat-cuidado" class="cat-card">
+      <span class="cat-thumb b"></span>
+      <h3>Cuidado personal</h3>
+      <span class="cat-count" data-count-for="cuidado">0 productos</span>
+    </a>
+    <a href="#cat-vitaminas" class="cat-card">
+      <span class="cat-thumb c"></span>
+      <h3>Vitaminas</h3>
+      <span class="cat-count" data-count-for="vitaminas">0 productos</span>
+    </a>
+    <a href="#cat-bebes" class="cat-card">
+      <span class="cat-thumb d"></span>
+      <h3>Bebés</h3>
+      <span class="cat-count" data-count-for="bebes">0 productos</span>
+    </a>
+  </div>
+</section>
+
+<section class="cat-section" id="cat-medicamentos">
+  <div class="wrap">
+    <h2 class="serif">Medicamentos</h2>
+    <div class="product-grid" data-category="medicamentos"></div>
+  </div>
+</section>
+
+<section class="cat-section" id="cat-cuidado">
+  <div class="wrap">
+    <h2 class="serif">Cuidado personal</h2>
+    <div class="product-grid" data-category="cuidado"></div>
+  </div>
+</section>
+
+<section class="cat-section" id="cat-vitaminas">
+  <div class="wrap">
+    <h2 class="serif">Vitaminas</h2>
+    <div class="product-grid" data-category="vitaminas"></div>
+  </div>
+</section>
+
+<section class="cat-section" id="cat-bebes">
+  <div class="wrap">
+    <h2 class="serif">Bebés</h2>
+    <div class="product-grid" data-category="bebes"></div>
+  </div>
+</section>
+
+<footer class="store-footer">
+  <div class="wrap store-footer-inner">
+    <div class="logo"><span class="mark"></span> Botica Johansu </div>
+    <p>Papelería no, ¡salud con confianza! Consulta a tu químico farmacéutico ante cualquier duda.</p>
+    <div class="store-footer-links">
+      <a href="https://www.instagram.com/eark_mn" target="_blank" rel="noopener">@boticajohansu</a>
+      <span>Yape: <strong>934420700</strong></span>
+    </div>
+    <a class="back-link inline" href="index.html">Tienda hecha con Botika Studio →</a>
+  </div>
+</footer>
+
+<!-- Carrito -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-label="Carrito de compras">
+  <div class="cart-drawer-head">
+    <h3 class="serif">Tu carrito</h3>
+    <button class="icon-close" id="cartCloseBtn" aria-label="Cerrar carrito">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <p class="cart-empty">Tu carrito está vacío.<br><span>Agrega medicamentos, cuidado personal o vitaminas desde el catálogo.</span></p>
+  </div>
+  <div class="cart-drawer-foot">
+    <div class="cart-total-row">
+      <span>Total</span>
+      <strong id="cartTotal">S/ 0.00</strong>
+    </div>
+    <button class="btn btn-primary btn-full" id="payYapeBtn">Pagar con Yape</button>
+    <button class="btn-text" id="clearCartBtn">Vaciar carrito</button>
+  </div>
+</aside>
+
+<!-- Modal de pago -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-yape">
+    <button class="icon-close" id="modalCloseBtn" aria-label="Cerrar">✕</button>
+    <h3 class="serif">Pagar con Yape</h3>
+    <p class="modal-total">Total a pagar <strong id="modalTotal">S/ 0.00</strong></p>
+    <div class="modal-grid">
+      <div class="qr-box">
+        <svg viewBox="0 0 120 120" class="fake-qr" aria-label="Código QR de Yape">
+          <rect width="120" height="120" rx="10" fill="#fff"/>
+          <g fill="#12201B">
+            <rect x="8" y="8" width="26" height="26"/><rect x="14" y="14" width="14" height="14" fill="#fff"/><rect x="18" y="18" width="6" height="6"/>
+            <rect x="86" y="8" width="26" height="26"/><rect x="92" y="14" width="14" height="14" fill="#fff"/><rect x="96" y="18" width="6" height="6"/>
+            <rect x="8" y="86" width="26" height="26"/><rect x="14" y="92" width="14" height="14" fill="#fff"/><rect x="18" y="96" width="6" height="6"/>
+            <rect x="44" y="8" width="6" height="6"/><rect x="56" y="8" width="6" height="6"/><rect x="68" y="14" width="6" height="6"/>
+            <rect x="44" y="20" width="6" height="6"/><rect x="60" y="26" width="6" height="6"/><rect x="44" y="44" width="6" height="6"/>
+            <rect x="56" y="44" width="6" height="6"/><rect x="68" y="44" width="6" height="6"/><rect x="44" y="56" width="6" height="6"/>
+            <rect x="68" y="56" width="6" height="6"/><rect x="80" y="56" width="6" height="6"/><rect x="44" y="68" width="6" height="6"/>
+            <rect x="56" y="68" width="6" height="6"/><rect x="92" y="68" width="6" height="6"/><rect x="44" y="80" width="6" height="6"/>
+            <rect x="68" y="80" width="6" height="6"/><rect x="80" y="92" width="6" height="6"/><rect x="56" y="92" width="6" height="6"/>
+            <rect x="68" y="100" width="6" height="6"/><rect x="92" y="100" width="6" height="6"/>
+          </g>
+        </svg>
+        <p class="qr-name">Johan Daniel Mamani</p>
+        <p class="qr-phone">934420700 <button class="btn-text" id="copyYapeBtn">Copiar</button></p>
+      </div>
+      <div class="modal-steps">
+        <h4>Cómo pagar</h4>
+        <ol>
+          <li>Escanea el QR o yapea al número indicado por el <strong>monto exacto</strong>.</li>
+          <li>Toma una captura de tu pago.</li>
+          <li>Envíanos la captura y tu pedido por WhatsApp para coordinar la entrega.</li>
+        </ol>
+        <div class="modal-actions">
+          <a href="#" id="whatsappOrderBtn" target="_blank" rel="noopener" class="btn btn-primary btn-full">Enviar pedido por WhatsApp</a>
+          <a href="https://www.instagram.com/eark_mn" target="_blank" rel="noopener" class="btn btn-ghost btn-full">Enviar por Instagram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/demo.js"></script>
+</body>
+</html>
